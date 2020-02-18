@@ -3,7 +3,7 @@
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 10vmin;
   pointer-events: none;
 }
 
@@ -15,12 +15,12 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 50vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(5px + 2vmin);
   color: white;
 }
 
@@ -35,4 +35,62 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.guitar {
+  width: 25px;
+  background-color: #282c34;
+  margin-right: 1.54rem;
+}
+
+.todosBox {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+  justify-items: center;
+  margin-top: 2rem;
+}
+
+.todoBox {
+  background: rgba(48, 55, 73, 0.8);
+  padding: 1rem;
+  color: white;
+  margin: 0.5rem;
+  width: 30%;
+  transition: all 0.2s;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.todoBox:hover {
+  transform: scale(1.2);
+}
+
+.completed {
+  font-style: italic;
+  color: dodgerblue;
+}
+
+.arrow {
+  width: 4rem;
+  display: block;
+  margin: 0.5rem auto;
+}
+
+.footer{
+  flex-direction: column;
+}
+
+
+.footer-misc {
+  margin-top: 1rem;
+  display: flex;
+
+
+}
+.footer-misc p {
+  margin-top: 1rem;
 }
