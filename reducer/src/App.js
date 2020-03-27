@@ -3,7 +3,6 @@ import logo from './img/g-round.png';
 import './App.css';
 import ToDos from './components/ToDos';
 import ToDoForm from './components/ToDoForm';
-import Footer from './components/Footer';
 import guitar from './img/g-icon.jpg'
 import moment from 'moment';
 import { reducer, initialState } from './reducers/reducer'
@@ -25,22 +24,22 @@ function App() {
     setTodoInput(e.target.value);
   }
 
+  //Toggle Func
   const toggleCompleted = (event, id) => {
     event.target.classList.toggle('completed');
     dispatch({type: 'TOGGLE', payload: id});
     const todoEl = document.getElementById(id);
 
-    //Remove arrow and date if present
-    const arrowEl = document.getElementById(`arrow${id}`);
+    //Remove guitar and date if present
+    const guitarEl = document.getElementById(`guitar${id}`);
     const timeEl = document.getElementById(`time${id}`);
-    if (arrowEl) {
-      todoEl.removeChild(arrowEl);
+    if (guitarEl) {
+      todoEl.removeChild(guitarEl);
     }
     if (timeEl) {
       todoEl.removeChild(timeEl);
     }
-    
-    // Otherwise, add arrow and date completed
+    // Otherwise, add guitar and date completed
     if (event.target.classList.contains('completed')) {
       
       const node = document.createElement('img');
@@ -56,6 +55,8 @@ function App() {
       todoEl.appendChild(timeNode);
     }
   }
+
+  
 
   const clearCompleted = () => {
     dispatch({type: 'CLEAR'});
@@ -75,7 +76,11 @@ function App() {
       <ToDoForm handleSubmit={handleSubmit} handleChanges={handleChanges} todoInput={todoInput} />
       <ToDos todos={state} toggleCompleted={toggleCompleted}/>
       <button onClick={clearCompleted}>Clear Completed Tasks</button>
-      <Footer />
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <p>Copyright Guin Productions Created by:Kim Semenza</p>
     </div>
   );
 }
