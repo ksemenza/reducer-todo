@@ -80,7 +80,7 @@ function App() {
   <br/>
   <br/>
   <br/>
-  <p>Copyright Guin Productions Created by:Kim Semenza</p>
+  <p>  © Guin Productions ~ Developer: K Semenza</p>
     </div>
   );
 }
