@@ -50,8 +50,7 @@ function App() {
       const timeStamp = moment().calendar();
       const timeNode = document.createElement('p');
       timeNode.id = `time${id}`;
-      timeNode.textContent= `Completed: ${timeStamp}`;
-      
+      timeNode.textContent= `${timeStamp}`;  
       todoEl.appendChild(timeNode);
     }
   }
@@ -64,18 +63,24 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        
+              <img src={logo} className="App-logo" alt="logo" />
+      <header className="App-header">        
         <h1>
          Learn Guitar 
         </h1>
-        <h2>{today.format("dddd, MMMM Do YYYY, h:mm:ss a")}</h2>
+        <h2>{today.format(`dddd`)}</h2>
+        <h2>{today.format(`MMMM Do YYYY`)}</h2>
+        <h2>{today.format(`h:mm a`)}</h2>
 
       </header>
+   
       <ToDoForm handleSubmit={handleSubmit} handleChanges={handleChanges} todoInput={todoInput} />
+
       <ToDos todos={state} toggleCompleted={toggleCompleted}/>
-      <button onClick={clearCompleted}>Clear Completed Tasks</button>
+
+      <p className='clear-title'>(click task to mark as complete)</p>
+      <button className='clear-btn' onClick={clearCompleted}>Clear</button>
+    
   <br/>
   <br/>
   <br/>

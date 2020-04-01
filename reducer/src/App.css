@@ -1,6 +1,7 @@
 .App {
   text-align: center;
-  padding: 3.2rem;
+  padding: 15px 2px;
+  margin-top: -20px;
 }
 
 .App-logo {
@@ -16,12 +17,13 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 50vh;
+  height: 190px;
+  margin-bottom: 35px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(5px + 2vmin);
+  font-size: 18px;
   color: white;
 }
 
@@ -47,7 +49,7 @@
 .todosBox {
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   justify-items: center;
   margin-top: 2rem;
@@ -55,15 +57,17 @@
 
 .todoBox {
   background: rgba(48, 55, 73, 0.8);
-  padding: 1rem;
+  margin:12px;
+  padding: 15px;
   color: white;
-  margin: 0.5rem;
-  width: 30%;
+  width: 20%;
+  height: 100px;
   transition: all 0.2s;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
+  font-size: 16px;
 }
 
 .todoBox:hover {
@@ -72,7 +76,7 @@
 
 .completed {
   font-style: italic;
-  color: dodgerblue;
+color: black;
 }
 
 .arrow {
@@ -89,9 +93,18 @@
 .footer-misc {
   margin-top: 1rem;
   display: flex;
-
-
 }
 .footer-misc p {
   margin-top: 1rem;
+}
+
+.clear-btn {
+  margin-top: 52px;
+}
+
+.clear-title{
+  margin-bottom: -40px;
+  margin-top: 70px;
+  font-style: italic;
+  font-size: 17px;
 }

@@ -10,11 +10,12 @@ const ToDoForm = ( { handleSubmit, handleChanges, todoInput }) => {
     
     return (
         <form onSubmit={handleSubmit}>
-            <label htmlFor='todo'>Add Guitar Lessons</label>
+            <label htmlFor='todo'>Add to List</label>
             <input name='todo'
                 id='todo'
                 value={todoInput}
                 onChange={handleChanges}
+                placeholder='New Task'
                 >
             </input>
             <button type='submit'>Submit</button>
