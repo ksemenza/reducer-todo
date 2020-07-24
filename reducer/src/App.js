@@ -47,11 +47,11 @@ function App() {
       node.id = `guitar${id}`;
       node.src = guitar;
       todoEl.prepend(node);
-      const timeStamp = moment().calendar();
+      const timeStamp = today.format('ddd MMMM DD YYYY h:mm a')
       const timeNode = document.createElement('p');
       timeNode.id = `time${id}`;
       timeNode.textContent= `${timeStamp}`;  
-      todoEl.appendChild(timeNode);
+      todoEl.prepend(timeNode);
     }
   }
 
@@ -66,7 +66,7 @@ function App() {
               <img src={logo} className="App-logo" alt="logo" />
       <header className="App-header">        
         <h1>
-         Learn Guitar 
+        Todo Check List
         </h1>
         <h2>{today.format(`dddd`)}</h2>
         <h2>{today.format(`MMMM Do YYYY`)}</h2>
@@ -78,14 +78,14 @@ function App() {
 
       <ToDos todos={state} toggleCompleted={toggleCompleted}/>
 
-      <p className='clear-title'>(click task to mark as complete)</p>
+      <h4 className='clear-title'>(click task to mark as complete)</h4>
       <button className='clear-btn' onClick={clearCompleted}>Clear</button>
     
   <br/>
   <br/>
   <br/>
   <br/>
-  <p>  © Guin Productions ~ Developer: K Semenza</p>
+  <h6>  © Guin Dev Productions ~ Developer: Kim Semenza</h6>
     </div>
   );
 }
